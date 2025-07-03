@@ -430,9 +430,8 @@ function SynergySection() {
                     <span className="text-success-600 font-bold text-sm">0×</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-dark-800">Integration Headaches</p>
-                    <p className="text-dark-600 text-sm">No Drupal, Squarespace, or custom CMS complications</p>
-                    <p className="text-dark-500 text-xs mt-1 italic">Iframe widget bypasses WP Engine's disallowed-plugin list</p>
+                    <p className="font-semibold text-dark-800">Extra Development Hours</p>
+                    <p className="text-dark-600 text-sm">Works on every client site you already manage—no extra dev hours</p>
                   </div>
                 </div>
               </div>
@@ -581,7 +580,7 @@ function ValueSection() {
           </div>
 
           {/* FFX NOVA Homepage Mockup */}
-          <div className="bg-gradient-to-r from-purple-900 to-purple-700 text-white p-8 relative">
+          <div className="bg-gradient-to-r from-purple-900 to-purple-700 text-white p-8 relative opacity-70">
             <div className="max-w-4xl">
               <div className="flex items-center justify-between mb-8">
                 <div className="text-2xl font-bold">FFX NOVA</div>
@@ -632,8 +631,8 @@ function ValueSection() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>
             </div>
-            <h3 className="font-semibold text-dark-900 mb-2 text-xl">Instant Answers</h3>
-            <p className="text-dark-600">Pulls from 48k+ job listings and site content</p>
+            <h3 className="font-semibold text-dark-900 mb-2 text-xl">Instant Answers (48K+ jobs)</h3>
+            <p className="text-dark-600">Pulls from job listings and site content</p>
           </div>
           
           <div className="text-center bg-white rounded-2xl p-8 shadow-lg">
@@ -802,7 +801,7 @@ function BrandSection() {
                   <svg className="w-5 h-5 text-success-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Eight flexible positioning options (corners + side centers)
+                  Eight flexible positioning options (4 corners + 4 side centers)
                 </li>
                 <li className="flex items-center gap-3">
                   <svg className="w-5 h-5 text-success-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -874,7 +873,12 @@ function SecuritySection() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-light-50 rounded-xl p-6">
-              <h4 className="font-medium text-dark-700 mb-6">Live Conversation Log</h4>
+              <div className="flex justify-between items-center mb-6">
+                <h4 className="font-medium text-dark-700">Live Conversation Log</h4>
+                <select className="text-xs bg-white border border-light-300 rounded px-2 py-1 text-dark-600">
+                  <option>Filter by site</option>
+                </select>
+              </div>
               <div className="space-y-4">
                 <div className="bg-white rounded-lg p-4">
                   <div className="flex justify-between mb-2">
@@ -953,7 +957,12 @@ function EngagementSection() {
               <div className="flex-1 text-right">
                 <h3 className="font-semibold text-dark-900 text-2xl mb-3">Week 1: Kickoff Sprint</h3>
                 <p className="text-dark-600 mb-2">2-hour session with your frontend engineer</p>
-                <p className="text-primary-600 font-medium">First bot goes live</p>
+                <p className="text-primary-600 font-medium flex items-center gap-2">
+                  <svg className="w-4 h-4 text-success-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  First bot goes live
+                </p>
               </div>
               <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-2xl z-10 relative shadow-xl">
                 1
@@ -961,10 +970,10 @@ function EngagementSection() {
               <div className="flex-1">
                 <div className="bg-light-50 rounded-xl shadow-lg p-6 max-w-sm">
                   <ul className="space-y-2 text-dark-600">
-                    <li>• Install widget code</li>
-                    <li>• Configure first chatbot</li>
-                    <li>• Test on staging site</li>
-                    <li>• Deploy to production</li>
+                    <li>• Install widget</li>
+                    <li>• Configure chatbot</li>
+                    <li>• Test staging</li>
+                    <li>• Deploy production</li>
                   </ul>
                 </div>
               </div>
