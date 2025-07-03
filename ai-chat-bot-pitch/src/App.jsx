@@ -902,15 +902,19 @@ function SecuritySection() {
             </div>
 
             <div className="bg-light-50 rounded-xl p-6">
-              <h4 className="font-medium text-dark-700 mb-6">Compliance Dashboard</h4>
+              <h4 className="font-medium text-dark-700 mb-6">Security Dashboard</h4>
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
-                  <span className="text-dark-600">GDPR Compliant</span>
+                  <span className="text-dark-600">RBAC (Role-Based Access)</span>
                   <span className="text-success-600 font-medium">✓ Active</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-dark-600">CCPA Compliant</span>
-                  <span className="text-success-600 font-medium">✓ Active</span>
+                  <span className="text-dark-600">End-to-End Encryption</span>
+                  <span className="text-success-600 font-medium">✓ AES-256</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-dark-600">XSS Prevention</span>
+                  <span className="text-success-600 font-medium">✓ Enabled</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-dark-600">PII Stripping</span>
@@ -951,7 +955,7 @@ function EngagementSection() {
                 <p className="text-dark-600 mb-2">2-hour session with your frontend engineer</p>
                 <p className="text-primary-600 font-medium">First bot goes live</p>
               </div>
-              <div className="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl z-10 relative shadow-xl">
+              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-2xl z-10 relative shadow-xl">
                 1
               </div>
               <div className="flex-1">
@@ -977,7 +981,7 @@ function EngagementSection() {
                   </ul>
                 </div>
               </div>
-              <div className="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xl z-10 relative shadow-xl">
+              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl z-10 relative shadow-xl">
                 2-4
               </div>
               <div className="flex-1">
@@ -993,7 +997,7 @@ function EngagementSection() {
                 <p className="text-dark-600 mb-2">Roll out to remaining 4 sites</p>
                 <p className="text-primary-600 font-medium">Full deployment</p>
               </div>
-              <div className="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xl z-10 relative shadow-xl">
+              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl z-10 relative shadow-xl">
                 5+
               </div>
               <div className="flex-1">
