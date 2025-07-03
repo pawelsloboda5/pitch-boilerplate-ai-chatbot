@@ -15,7 +15,7 @@ function ChatWidgetDemo() {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed right-4 top-1/2 z-50 -translate-y-1/2 rotate-90 origin-right bg-dark-900 text-white py-2 px-4 rounded-t-full flex items-center gap-1 hover:bg-dark-800 shadow-lg border border-dark-950"
+          className="chatbot-button fixed right-4 top-1/2 z-50 -translate-y-1/2 rotate-90 origin-right bg-dark-900 text-white py-2 px-4 rounded-t-full flex items-center gap-1 hover:bg-dark-800 shadow-lg border border-dark-950"
           style={{ backgroundColor: '#0f172a' }}
         >
           <Bot className="w-4 h-4 text-white" />
@@ -45,7 +45,7 @@ function ChatWidgetDemo() {
                </span>
                <button
                  onClick={() => setOpen(false)}
-                 className="p-2 rounded-full hover:bg-slate-100 transition-colors"
+                 className="chatbot-button p-2 rounded-full hover:bg-slate-100 transition-colors"
                  aria-label="Close chat"
                >
                  <X className="w-5 h-5 text-slate-600" />
@@ -53,7 +53,7 @@ function ChatWidgetDemo() {
              </header>
 
                          {/* Tab bar */}
-             <div className="flex justify-center gap-1 border-b px-4 py-3">
+             <div className="flex justify-center gap-4 border-b border-slate-200 px-6 py-4">
                {[
                  { id: "chat", label: "Chat", Icon: Bot },
                  { id: "search", label: "Search", Icon: Search },
@@ -64,11 +64,17 @@ function ChatWidgetDemo() {
                    onClick={() => setTab(id)}
                    className={
                      tab === id
-                       ? "bg-slate-900 text-white flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium shadow-md"
-                       : "flex items-center gap-2 px-4 py-2 rounded-full hover:bg-slate-100 text-slate-700 text-sm font-medium transition-colors border border-slate-200"
+                       ? "chatbot-button flex items-center gap-2 rounded-full text-sm font-medium shadow-md"
+                       : "chatbot-button flex items-center gap-2 rounded-full hover:bg-slate-100 text-slate-700 text-sm font-medium transition-colors border border-slate-200"
+                   }
+                   style={
+                     tab === id 
+                       ? { backgroundColor: '#0f172a', color: '#ffffff', padding: '8px 16px' } 
+                       : { padding: '8px 16px' }
                    }
                  >
-                   <Icon className="w-4 h-4" /> {label}
+                   <Icon className="w-4 h-4" style={tab === id ? { color: '#ffffff' } : { color: '#334155' }} /> 
+                   <span style={tab === id ? { color: '#ffffff' } : { color: '#334155' }}>{label}</span>
                  </button>
                ))}
              </div>
@@ -132,7 +138,7 @@ function ChatWidgetDemo() {
                    <div className="text-slate-800 font-medium">Quick Search</div>
                    <div className="flex flex-wrap gap-2">
                      {['Technology', 'Healthcare', 'Government', 'Finance', 'Aerospace'].map((industry) => (
-                       <button key={industry} className="px-4 py-2 bg-slate-100 rounded-full text-sm hover:bg-slate-200 transition-colors border border-slate-200 text-slate-700">
+                       <button key={industry} className="chatbot-button px-4 py-2 bg-slate-100 rounded-full text-sm hover:bg-slate-200 transition-colors border border-slate-200 text-slate-700">
                          {industry}
                        </button>
                      ))}
@@ -166,7 +172,7 @@ function ChatWidgetDemo() {
                  disabled
                />
                <button
-                 className="px-5 py-3 bg-slate-900 text-white rounded-full text-sm opacity-50 flex items-center gap-2 hover:opacity-60 transition-opacity"
+                 className="chatbot-button px-5 py-3 bg-slate-900 text-white rounded-full text-sm opacity-50 flex items-center gap-2 hover:opacity-60 transition-opacity"
                  disabled
                >
                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

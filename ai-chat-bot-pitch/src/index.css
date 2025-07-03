@@ -79,3 +79,24 @@ button:focus-visible {
 html {
   scroll-behavior: smooth;
 }
+
+/* Override global button styles for chatbot */
+.chatbot-button {
+  border: none !important;
+  padding: 0 !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+}
+
+.chatbot-button:hover {
+  border-color: transparent !important;
+}
+
+/* Ensure text is visible in chatbot buttons */
+.chatbot-button:not([style*="background-color"]) {
+  background-color: transparent !important;
+}
+
+.chatbot-button:not([style*="color"]) {
+  color: inherit !important;
+}
