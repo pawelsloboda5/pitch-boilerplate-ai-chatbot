@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import { Bot, Search, Bookmark, X, Settings, FileText, Users, LayoutDashboard } from 'lucide-react'
 import './App.css'
 
