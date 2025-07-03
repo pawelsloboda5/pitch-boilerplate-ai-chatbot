@@ -246,28 +246,28 @@ function HeroSection() {
     <section id="hero" className="min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-light-50 to-light-100">
       <div className="max-w-6xl mx-auto text-center">
         <h1 className="text-6xl font-heading font-bold text-dark-900 mb-6">
-          AI Chatbots for WordPress Clients
+          AI Chatbots for Your WordPress Sites
         </h1>
         <p className="text-2xl text-dark-600 mb-12 font-body">
-          Turn every visit into a conversation.
+          Turn every visitor into a potential lead.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <div className="bg-white rounded-2xl p-6 shadow-lg">
             <div className="text-accent-600 text-4xl font-bold mb-2">1</div>
-            <p className="text-dark-700">Code-free widget</p>
+            <p className="text-dark-700">Universal widget</p>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-lg">
             <div className="text-accent-600 text-4xl font-bold mb-2">5</div>
-            <p className="text-dark-700">Client sites</p>
+            <p className="text-dark-700">WordPress sites</p>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-lg">
-            <div className="text-accent-600 text-4xl font-bold mb-2">∞</div>
-            <p className="text-dark-700">Engagement</p>
+            <div className="text-accent-600 text-4xl font-bold mb-2">24/7</div>
+            <p className="text-dark-700">Lead capture</p>
           </div>
         </div>
 
-        <p className="text-dark-500">Built for agencies that live and breathe WordPress.</p>
+        <p className="text-dark-500">One solution across your entire WordPress portfolio.</p>
         
         {/* Scroll indicator */}
         <div className="mt-16 animate-bounce">
@@ -941,7 +941,7 @@ function EngagementSection() {
           <h2 className="text-5xl font-heading font-bold text-dark-900 mb-4">
             Fast Start, Steady Momentum
           </h2>
-          <p className="text-xl text-dark-600 font-body">We move at the speed of your team.</p>
+          <p className="text-xl text-dark-600 font-body">Tailored development at your pace.</p>
         </div>
 
         {/* Timeline */}
@@ -1015,7 +1015,7 @@ function EngagementSection() {
         </div>
 
         <div className="text-center">
-          <p className="text-dark-600 text-lg">Join forward-thinking WordPress agencies using AI to delight clients</p>
+          <p className="text-dark-600 text-lg">Ready to transform your WordPress sites with intelligent chatbots?</p>
         </div>
       </div>
     </section>
