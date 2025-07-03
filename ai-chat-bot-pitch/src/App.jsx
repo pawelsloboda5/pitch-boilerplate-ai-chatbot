@@ -418,10 +418,10 @@ function SynergySection() {
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-success-600 font-bold text-sm">5×</span>
+                    <span className="text-success-600 font-bold text-sm">5</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-dark-800">Revenue Potential</p>
+                    <p className="font-semibold text-dark-800">Sites Live on Day 1</p>
                     <p className="text-dark-600 text-sm">Deploy to five sites immediately</p>
                   </div>
                 </div>
@@ -432,6 +432,7 @@ function SynergySection() {
                   <div>
                     <p className="font-semibold text-dark-800">Integration Headaches</p>
                     <p className="text-dark-600 text-sm">No Drupal, Squarespace, or custom CMS complications</p>
+                    <p className="text-dark-500 text-xs mt-1 italic">Iframe widget bypasses WP Engine's disallowed-plugin list</p>
                   </div>
                 </div>
               </div>
@@ -474,7 +475,7 @@ function SynergySection() {
         </div>
 
         {/* Shared Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
             <div className="w-16 h-16 bg-accent-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -504,6 +505,25 @@ function SynergySection() {
             </div>
             <h3 className="font-semibold text-dark-900 mb-2 text-xl">Community Matching</h3>
             <p className="text-dark-600 text-sm">Philly, Carolina, and Kansas use the same neighborhood quiz technology</p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+            <div className="w-16 h-16 bg-accent-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              {/* GTM Icon */}
+              <svg className="w-8 h-8 text-accent-600" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.93-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <h3 className="font-semibold text-dark-900 mb-2 text-xl">Built-in Analytics</h3>
+            <div className="text-dark-600 text-sm space-y-2">
+              <p>GTM events fire automatically across all sites</p>
+              <div className="flex items-center justify-center gap-1 text-xs text-success-700">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                Attribution out-of-the-box
+              </div>
+            </div>
           </div>
         </div>
 
