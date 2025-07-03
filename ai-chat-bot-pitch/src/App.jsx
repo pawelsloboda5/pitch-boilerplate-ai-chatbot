@@ -15,11 +15,19 @@ function ChatWidgetDemo() {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="chatbot-button fixed right-4 top-1/2 z-50 -translate-y-1/2 rotate-90 origin-right bg-dark-900 text-white py-2 px-4 rounded-t-full flex items-center gap-1 hover:bg-dark-800 shadow-lg border border-dark-950"
-          style={{ backgroundColor: '#0f172a' }}
+          className="fixed right-4 top-1/2 z-50 -translate-y-1/2 rotate-90 origin-right py-2 px-4 rounded-t-full flex items-center gap-1 shadow-lg"
+          style={{
+            backgroundColor: '#0f172a',
+            color: '#ffffff',
+            border: 'none',
+            fontSize: '0.75rem',
+            fontWeight: '600'
+          }}
+          onMouseEnter={(e) => e.target.style.backgroundColor = '#1e293b'}
+          onMouseLeave={(e) => e.target.style.backgroundColor = '#0f172a'}
         >
-          <Bot className="w-4 h-4 text-white" />
-          <span className="text-xs font-semibold whitespace-nowrap text-white">
+          <Bot className="w-4 h-4" style={{ color: '#ffffff' }} />
+          <span className="whitespace-nowrap" style={{ color: '#ffffff' }}>
             Find&nbsp;Jobs&nbsp;in&nbsp;NOVA
           </span>
         </button>
@@ -206,6 +214,7 @@ function App() {
           <nav className="hidden md:flex gap-8">
             <a href="#hero" className="text-dark-600 hover:text-primary-600 transition-colors">Overview</a>
             <a href="#dashboard" className="text-dark-600 hover:text-primary-600 transition-colors">Dashboard</a>
+            <a href="#synergy" className="text-dark-600 hover:text-primary-600 transition-colors">Advantage</a>
             <a href="#value" className="text-dark-600 hover:text-primary-600 transition-colors">Live Demo</a>
             <a href="#brand" className="text-dark-600 hover:text-primary-600 transition-colors">Branding</a>
             <a href="#security" className="text-dark-600 hover:text-primary-600 transition-colors">Security</a>
@@ -218,6 +227,7 @@ function App() {
       <main>
         <HeroSection />
         <DashboardSection />
+        <SynergySection />
         <ValueSection />
         <BrandSection />
         <SecuritySection />
@@ -368,6 +378,157 @@ function DashboardSection() {
               One-click configuration and deployment
             </li>
           </ul>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function SynergySection() {
+  return (
+    <section id="synergy" className="min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-accent-50 to-primary-50">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-heading font-bold text-dark-900 mb-4">
+            Your Secret Advantage
+          </h2>
+          <p className="text-xl text-dark-600 font-body">All five sites share the same foundation</p>
+        </div>
+
+        {/* Main Value Proposition */}
+        <div className="bg-white rounded-2xl shadow-2xl p-12 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-dark-900 mb-6">
+                Build Once. Deploy Everywhere.
+              </h3>
+              <p className="text-lg text-dark-600 mb-6">
+                Every client site uses identical technology: WordPress, Vue, and the same custom theme. 
+                This isn't just convenient—it's your competitive moat.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-success-600 font-bold text-sm">1×</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-dark-800">Development Cost</p>
+                    <p className="text-dark-600 text-sm">One chatbot codebase works across all sites</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-success-600 font-bold text-sm">5×</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-dark-800">Revenue Potential</p>
+                    <p className="text-dark-600 text-sm">Deploy to five sites immediately</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-success-600 font-bold text-sm">0×</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-dark-800">Integration Headaches</p>
+                    <p className="text-dark-600 text-sm">No Drupal, Squarespace, or custom CMS complications</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              {/* Visual representation */}
+              <div className="bg-gradient-to-br from-primary-100 to-accent-100 rounded-xl p-8">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-primary-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <p className="font-semibold text-dark-800">One Codebase</p>
+                </div>
+                
+                <div className="grid grid-cols-1 gap-3">
+                  {[
+                    { name: "Love Kansas", color: "bg-yellow-400" },
+                    { name: "Fairfax NOVA", color: "bg-blue-500" },
+                    { name: "Carolina Core", color: "bg-slate-700" },
+                    { name: "Stay for Philly", color: "bg-rose-500" },
+                    { name: "You Can in MI", color: "bg-emerald-500" }
+                  ].map((site) => (
+                    <div key={site.name} className="bg-white rounded-lg p-3 flex items-center gap-3 shadow-sm">
+                      <div className={`w-4 h-4 rounded-full ${site.color}`}></div>
+                      <span className="text-sm font-medium text-dark-700">{site.name}</span>
+                      <div className="ml-auto">
+                        <svg className="w-4 h-4 text-success-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Shared Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+            <div className="w-16 h-16 bg-accent-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 className="font-semibold text-dark-900 mb-2 text-xl">Cost Calculators</h3>
+            <p className="text-dark-600 text-sm">Kansas, Michigan, Carolina, and Philly all use the same cost-of-living tools</p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+            <div className="w-16 h-16 bg-accent-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />
+              </svg>
+            </div>
+            <h3 className="font-semibold text-dark-900 mb-2 text-xl">Job Boards</h3>
+            <p className="text-dark-600 text-sm">NOVA, Carolina, Kansas, and Philly share identical job search infrastructure</p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+            <div className="w-16 h-16 bg-accent-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 className="font-semibold text-dark-900 mb-2 text-xl">Community Matching</h3>
+            <p className="text-dark-600 text-sm">Philly, Carolina, and Kansas use the same neighborhood quiz technology</p>
+          </div>
+        </div>
+
+        {/* Bottom Impact Statement */}
+        <div className="text-center">
+          <div className="bg-dark-900 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">The Bottom Line</h3>
+            <p className="text-lg text-dark-100 mb-6">
+              While your competitors build custom solutions for each client, you deploy proven technology across your entire portfolio.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-accent-400 mb-2">80%</div>
+                <p className="text-dark-200">Lower development cost per site</p>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-accent-400 mb-2">5x</div>
+                <p className="text-dark-200">Faster time to market</p>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-accent-400 mb-2">100%</div>
+                <p className="text-dark-200">Consistent quality across all sites</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
