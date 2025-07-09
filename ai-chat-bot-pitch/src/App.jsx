@@ -40,23 +40,23 @@ function ChatWidgetDemo() {
             onClick={() => setOpen(false)}
           />
 
-          <div className="fixed right-0 top-0 z-50 h-full w-[420px] max-w-full bg-white shadow-xl flex flex-col">
+          <div className="fixed right-0 top-0 z-50 h-full w-full sm:w-[420px] bg-white shadow-xl flex flex-col">
                          {/* Header */}
-             <header className="h-16 px-6 flex items-center justify-between border-b border-slate-200">
-               <span className="flex items-center gap-3 text-base font-semibold text-slate-800">
-                 <div className="w-8 h-8 bg-slate-900 text-white flex items-center justify-center rounded-full">
-                   <Bot className="w-4 h-4" />
-                 </div>
-                 Fairfax NOVA Career Bot
-               </span>
-               <button
-                 onClick={() => setOpen(false)}
-                 className="chatbot-button p-2 rounded-full hover:bg-slate-100 transition-colors"
-                 aria-label="Close chat"
-               >
-                 <X className="w-5 h-5 text-slate-600" />
-               </button>
-             </header>
+                           <header className="h-14 sm:h-16 px-4 sm:px-6 flex items-center justify-between border-b border-slate-200">
+                <span className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base font-semibold text-slate-800">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 bg-slate-900 text-white flex items-center justify-center rounded-full">
+                    <Bot className="w-4 h-4" />
+                  </div>
+                  <span className="line-clamp-1">Fairfax NOVA Career Bot</span>
+                </span>
+                <button
+                  onClick={() => setOpen(false)}
+                  className="chatbot-button p-1.5 sm:p-2 rounded-full hover:bg-slate-100 transition-colors"
+                  aria-label="Close chat"
+                >
+                  <X className="w-5 h-5 text-slate-600" />
+                </button>
+              </header>
 
                          {/* Tab bar */}
              <div className="flex justify-center gap-4 border-b border-slate-200 px-6 py-4">
@@ -198,26 +198,33 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-light-50 to-light-100">
       {/* Fixed Navigation Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-light-200">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary-600 rounded-lg flex items-center justify-center">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
               </svg>
             </div>
-            <span className="font-heading font-semibold text-dark-900">ChatFlow Pro</span>
+            <span className="font-heading font-semibold text-dark-900 text-sm sm:text-base">ChatFlow Pro</span>
           </div>
           
-          {/* Navigation Links */}
-          <nav className="hidden md:flex gap-8">
-            <a href="#hero" className="text-dark-600 hover:text-primary-600 transition-colors">Overview</a>
-            <a href="#dashboard" className="text-dark-600 hover:text-primary-600 transition-colors">Dashboard</a>
-            <a href="#synergy" className="text-dark-600 hover:text-primary-600 transition-colors">Advantage</a>
-            <a href="#value" className="text-dark-600 hover:text-primary-600 transition-colors">Live Demo</a>
-            <a href="#brand" className="text-dark-600 hover:text-primary-600 transition-colors">Branding</a>
-            <a href="#security" className="text-dark-600 hover:text-primary-600 transition-colors">Security</a>
-            <a href="#engagement" className="text-dark-600 hover:text-primary-600 transition-colors">Implementation</a>
+          {/* Navigation Links - Desktop */}
+          <nav className="hidden md:flex gap-4 lg:gap-8">
+            <a href="#hero" className="text-dark-600 hover:text-primary-600 transition-colors text-sm lg:text-base">Overview</a>
+            <a href="#dashboard" className="text-dark-600 hover:text-primary-600 transition-colors text-sm lg:text-base">Dashboard</a>
+            <a href="#synergy" className="text-dark-600 hover:text-primary-600 transition-colors text-sm lg:text-base">Advantage</a>
+            <a href="#value" className="text-dark-600 hover:text-primary-600 transition-colors text-sm lg:text-base">Live Demo</a>
+            <a href="#brand" className="text-dark-600 hover:text-primary-600 transition-colors text-sm lg:text-base">Branding</a>
+            <a href="#security" className="text-dark-600 hover:text-primary-600 transition-colors text-sm lg:text-base">Security</a>
+            <a href="#engagement" className="text-dark-600 hover:text-primary-600 transition-colors text-sm lg:text-base">Implementation</a>
           </nav>
+          
+          {/* Mobile Menu Button */}
+          <button className="md:hidden p-2">
+            <svg className="w-6 h-6 text-dark-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </header>
 
@@ -241,31 +248,31 @@ function App() {
 // Section Components - Each takes full viewport height
 function HeroSection() {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-light-50 to-light-100">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 bg-gradient-to-br from-light-50 to-light-100">
       <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-6xl font-heading font-bold text-dark-900 mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-dark-900 mb-4 sm:mb-6">
           AI Chatbots for Your WordPress Sites
         </h1>
-        <p className="text-2xl text-dark-600 mb-12 font-body">
+        <p className="text-lg sm:text-xl md:text-2xl text-dark-600 mb-8 sm:mb-12 font-body">
           Turn every visitor into a potential lead.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <div className="bg-white rounded-2xl p-6 shadow-lg">
-            <div className="text-accent-600 text-4xl font-bold mb-2">1</div>
-            <p className="text-dark-700">Universal widget</p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 sm:mb-16">
+          <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg">
+            <div className="text-accent-600 text-3xl sm:text-4xl font-bold mb-2">1</div>
+            <p className="text-dark-700 text-sm sm:text-base">Universal widget</p>
           </div>
-          <div className="bg-white rounded-2xl p-6 shadow-lg">
-            <div className="text-accent-600 text-4xl font-bold mb-2">5</div>
-            <p className="text-dark-700">WordPress sites</p>
+          <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg">
+            <div className="text-accent-600 text-3xl sm:text-4xl font-bold mb-2">5</div>
+            <p className="text-dark-700 text-sm sm:text-base">WordPress sites</p>
           </div>
-          <div className="bg-white rounded-2xl p-6 shadow-lg">
-            <div className="text-accent-600 text-4xl font-bold mb-2">24/7</div>
-            <p className="text-dark-700">Lead capture</p>
+          <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg">
+            <div className="text-accent-600 text-3xl sm:text-4xl font-bold mb-2">24/7</div>
+            <p className="text-dark-700 text-sm sm:text-base">Lead capture</p>
           </div>
         </div>
 
-        <p className="text-dark-500">One solution across your entire WordPress portfolio.</p>
+        <p className="text-dark-500 text-sm sm:text-base">One solution across your entire WordPress portfolio.</p>
         
         {/* Scroll indicator */}
         <div className="mt-16 animate-bounce">
@@ -280,20 +287,20 @@ function HeroSection() {
 
 function DashboardSection() {
   return (
-    <section id="dashboard" className="min-h-screen flex items-center justify-center px-6 bg-white">
+    <section id="dashboard" className="min-h-screen flex items-center justify-center px-4 sm:px-6 bg-white">
       <div className="max-w-7xl mx-auto w-full">
-        <div className="text-center mb-8">
-          <h2 className="text-5xl font-heading font-bold text-dark-900 mb-4">
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-dark-900 mb-3 sm:mb-4">
             All Your Bots. One Dashboard.
           </h2>
-          <p className="text-xl text-dark-600 font-body">Professional admin interface for managing all client chatbots</p>
+          <p className="text-base sm:text-lg md:text-xl text-dark-600 font-body">Professional admin interface for managing all client chatbots</p>
         </div>
 
         {/* Dashboard Mockup */}
-        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden" style={{height: '600px'}}>
+        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden" style={{minHeight: '400px', height: 'auto'}}>
           <div className="flex h-full bg-slate-50 font-sans">
-            {/* Sidebar */}
-            <aside className="w-60 shrink-0 bg-white border-r border-slate-200 flex flex-col">
+            {/* Sidebar - Hidden on mobile */}
+            <aside className="hidden md:flex w-60 shrink-0 bg-white border-r border-slate-200 flex-col">
               <h2 className="px-6 py-4 text-xl font-bold tracking-tight flex items-center gap-2">
                 <LayoutDashboard className="w-5 h-5"/>
                 ChatFlow Pro
@@ -316,9 +323,9 @@ function DashboardSection() {
             </aside>
 
             {/* Main Content */}
-            <main className="flex-1 overflow-y-auto p-8">
-              <h1 className="text-2xl font-semibold mb-6">Chatbots</h1>
-              <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
+              <h1 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Chatbots</h1>
+              <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
                 {[
                   {name: "Love Kansas", color: "bg-yellow-400", msgs: "4.2k", cost: "$24"},
                   {name: "Fairfax NOVA", color: "bg-blue-600", msgs: "6.8k", cost: "$38"},
@@ -384,17 +391,17 @@ function DashboardSection() {
 
 function SynergySection() {
   return (
-    <section id="synergy" className="min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-accent-50 to-primary-50">
+    <section id="synergy" className="min-h-screen flex items-center justify-center px-4 sm:px-6 bg-gradient-to-br from-accent-50 to-primary-50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-heading font-bold text-dark-900 mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-dark-900 mb-3 sm:mb-4">
             Your Secret Advantage
           </h2>
-          <p className="text-xl text-dark-600 font-body">All five sites share the same foundation</p>
+          <p className="text-base sm:text-lg md:text-xl text-dark-600 font-body">All five sites share the same foundation</p>
         </div>
 
         {/* Main Value Proposition */}
-        <div className="bg-white rounded-2xl shadow-2xl p-12 mb-16">
+        <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 lg:p-12 mb-12 sm:mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold text-dark-900 mb-6">
@@ -554,13 +561,13 @@ function SynergySection() {
 
 function ValueSection() {
   return (
-    <section id="value" className="min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-primary-50 to-accent-50 relative">
+    <section id="value" className="min-h-screen flex items-center justify-center px-4 sm:px-6 bg-gradient-to-br from-primary-50 to-accent-50 relative">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-heading font-bold text-dark-900 mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-dark-900 mb-3 sm:mb-4">
             Live Demo: FFX NOVA Site
           </h2>
-          <p className="text-xl text-dark-600 font-body">See how it works on a real client site</p>
+          <p className="text-base sm:text-lg md:text-xl text-dark-600 font-body">See how it works on a real client site</p>
         </div>
 
         {/* FFX NOVA Site Mockup */}
@@ -578,44 +585,45 @@ function ValueSection() {
           </div>
 
           {/* FFX NOVA Homepage Mockup */}
-          <div className="bg-gradient-to-r from-purple-900 to-purple-700 text-white p-8 relative opacity-70">
+          <div className="bg-gradient-to-r from-purple-900 to-purple-700 text-white p-4 sm:p-6 lg:p-8 relative opacity-70">
             <div className="max-w-4xl">
-              <div className="flex items-center justify-between mb-8">
-                <div className="text-2xl font-bold">FFX NOVA</div>
-                <div className="flex gap-6 text-sm">
-                  <span>EVENTS</span>
-                  <span>ABOUT US</span>
+              <div className="flex items-center justify-between mb-4 sm:mb-8">
+                <div className="text-lg sm:text-xl md:text-2xl font-bold">FFX NOVA</div>
+                <div className="hidden sm:flex gap-2 md:gap-4 lg:gap-6 text-xs md:text-sm">
+                  <span className="hidden lg:inline">EVENTS</span>
+                  <span className="hidden lg:inline">ABOUT US</span>
                   <span>EMPLOYER RESOURCES</span>
                   <span>CAREER RESOURCES</span>
-                  <span className="bg-green-500 px-3 py-1 rounded">FIND A JOB</span>
+                  <span className="bg-green-500 px-2 md:px-3 py-1 rounded">FIND A JOB</span>
                 </div>
+                <button className="sm:hidden bg-green-500 px-3 py-1 rounded text-sm">MENU</button>
               </div>
               
-              <div className="space-y-6">
-                <h1 className="text-5xl font-bold">
+              <div className="space-y-4 sm:space-y-6">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
                   FIND YOUR<br />
                   <span className="text-green-400">FUTURE</span> HERE.
                 </h1>
-                <p className="text-xl opacity-90 max-w-2xl">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 max-w-2xl">
                   In FFX NOVA, your career is created through adventure, and your path forward is driven by purpose.
                 </p>
-                <div className="flex gap-4">
-                  <button className="bg-purple-800 px-6 py-3 rounded font-medium">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                  <button className="bg-purple-800 px-4 sm:px-6 py-2 sm:py-3 rounded font-medium text-xs sm:text-sm">
                     LOOKING FOR A JOB? GET HELP NOW!
                   </button>
-                  <button className="bg-purple-800 px-6 py-3 rounded font-medium">
+                  <button className="hidden sm:block bg-purple-800 px-6 py-3 rounded font-medium text-sm">
                     CONNECT TO THOUSANDS OF JOB OPENINGS
                   </button>
-                  <button className="bg-purple-800 px-6 py-3 rounded font-medium">
+                  <button className="hidden md:block bg-purple-800 px-6 py-3 rounded font-medium text-sm">
                     KEY INDUSTRIES
                   </button>
                 </div>
               </div>
             </div>
             
-            {/* Instruction overlay */}
-            <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-lg p-4 text-sm">
-              <p className="mb-2">👆 <strong>Try the chatbot!</strong></p>
+            {/* Instruction overlay - hide on mobile */}
+            <div className="hidden sm:block absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-lg p-3 lg:p-4 text-xs lg:text-sm">
+              <p className="mb-1 lg:mb-2">👆 <strong>Try the chatbot!</strong></p>
               <p>Click "Find Jobs in NOVA" on the right edge →</p>
             </div>
           </div>
@@ -660,19 +668,19 @@ function ValueSection() {
 
 function BrandSection() {
   return (
-    <section id="brand" className="min-h-screen flex items-center justify-center px-6 bg-white">
+    <section id="brand" className="min-h-screen flex items-center justify-center px-4 sm:px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-heading font-bold text-dark-900 mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-dark-900 mb-3 sm:mb-4">
             Looks and Sounds Like <em>You</em>
           </h2>
-          <p className="text-xl text-dark-600 font-body">Because generic bots don't build brands.</p>
+          <p className="text-base sm:text-lg md:text-xl text-dark-600 font-body">Because generic bots don't build brands.</p>
         </div>
 
         {/* Customization Demo */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="bg-light-50 rounded-2xl shadow-xl p-8">
-            <h3 className="font-semibold text-dark-900 mb-6 text-xl">Customize for Love Kansas</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="bg-light-50 rounded-2xl shadow-xl p-4 sm:p-6 lg:p-8">
+            <h3 className="font-semibold text-dark-900 mb-4 sm:mb-6 text-lg sm:text-xl">Customize for Love Kansas</h3>
             
             <div className="space-y-8">
               <div>
@@ -824,13 +832,13 @@ function BrandSection() {
 
 function SecuritySection() {
   return (
-    <section id="security" className="min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-light-50 to-light-100">
+    <section id="security" className="min-h-screen flex items-center justify-center px-4 sm:px-6 bg-gradient-to-br from-light-50 to-light-100">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-heading font-bold text-dark-900 mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-dark-900 mb-3 sm:mb-4">
             Built for Compliance. Powered for Growth.
           </h2>
-          <p className="text-xl text-dark-600 font-body">Trust comes first.</p>
+          <p className="text-base sm:text-lg md:text-xl text-dark-600 font-body">Trust comes first.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -937,13 +945,13 @@ function SecuritySection() {
 
 function EngagementSection() {
   return (
-    <section id="engagement" className="min-h-screen flex items-center justify-center px-6 bg-white">
+    <section id="engagement" className="min-h-screen flex items-center justify-center px-4 sm:px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-heading font-bold text-dark-900 mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-dark-900 mb-3 sm:mb-4">
             Fast Start, Steady Momentum
           </h2>
-          <p className="text-xl text-dark-600 font-body">Tailored development at your pace.</p>
+          <p className="text-base sm:text-lg md:text-xl text-dark-600 font-body">Tailored development at your pace.</p>
         </div>
 
         {/* Timeline */}
@@ -951,23 +959,23 @@ function EngagementSection() {
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-light-300"></div>
           
           <div className="space-y-16">
-            <div className="flex items-center gap-12">
-              <div className="flex-1 text-right">
-                <h3 className="font-semibold text-dark-900 text-2xl mb-3">Week 1: Kickoff Sprint</h3>
-                <p className="text-dark-600 mb-2">2-hour session with your frontend engineer</p>
-                <p className="text-primary-600 font-medium flex items-center gap-2">
+            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
+              <div className="md:flex-1 text-center md:text-right">
+                <h3 className="font-semibold text-dark-900 text-xl sm:text-2xl mb-2 sm:mb-3">Week 1: Kickoff Sprint</h3>
+                <p className="text-dark-600 text-sm sm:text-base mb-2">2-hour session with your frontend engineer</p>
+                <p className="text-primary-600 font-medium flex items-center justify-center md:justify-end gap-2 text-sm sm:text-base">
                   <svg className="w-4 h-4 text-success-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   First bot goes live
                 </p>
               </div>
-              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-2xl z-10 relative shadow-xl">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl sm:text-2xl z-10 relative shadow-xl">
                 1
               </div>
-              <div className="flex-1">
-                <div className="bg-light-50 rounded-xl shadow-lg p-6 max-w-sm">
-                  <ul className="space-y-2 text-dark-600">
+              <div className="md:flex-1">
+                <div className="bg-light-50 rounded-xl shadow-lg p-4 sm:p-6 max-w-sm mx-auto md:mx-0">
+                  <ul className="space-y-2 text-dark-600 text-sm sm:text-base">
                     <li>• Install widget</li>
                     <li>• Configure chatbot</li>
                     <li>• Test staging</li>
